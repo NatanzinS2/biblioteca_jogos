@@ -17,9 +17,9 @@ COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
 
 # Variáveis de ambiente que o Render pode sobrescrever
-ENV SPRING_DATASOURCE_URL=jdbc:postgresql://ep-restless-art-adic3kzr-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb?sslmode=require
+ENV SPRING_DATASOURCE_URL=jdbc:postgresql://neondb_owner:npg_cQ3dOYDySx4I@ep-round-leaf-ad712v70-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
 ENV SPRING_DATASOURCE_USERNAME=neondb_owner
-ENV SPRING_DATASOURCE_PASSWORD=npg_yf2crBEFlh1K
+ENV SPRING_DATASOURCE_PASSWORD=npg_cQ3dOYDySx4I
 ENV SPRING_PROFILES_ACTIVE=prod
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
